@@ -1,19 +1,19 @@
 -- Create company_dim table with primary key
 CREATE TABLE public.company_dim
 (
-    company_id INT PRIMARY KEY,
-    name TEXT,
-    link TEXT,
+    company_id  INT PRIMARY KEY,
+    name        TEXT,
+    link        TEXT,
     link_google TEXT,
-    thumbnail TEXT
+    thumbnail   TEXT
 );
 
 -- Create skills_dim table with primary key
 CREATE TABLE public.skills_dim
 (
     skill_id INT PRIMARY KEY,
-    skills TEXT,
-    type TEXT
+    skills   TEXT,
+    type     TEXT
 );
 
 -- Create job_postings_fact table with primary key
@@ -47,6 +47,8 @@ CREATE TABLE public.skills_job_dim
     FOREIGN KEY (job_id) REFERENCES public.job_postings_fact (job_id),
     FOREIGN KEY (skill_id) REFERENCES public.skills_dim (skill_id)
 );
+
+CREATE ROLE postgres;
 
 -- Set ownership of the tables to the postgres user
 ALTER TABLE public.company_dim OWNER to postgres;

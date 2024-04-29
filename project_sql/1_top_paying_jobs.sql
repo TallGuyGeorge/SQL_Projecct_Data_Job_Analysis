@@ -57,3 +57,15 @@ ORDER BY
     jpf.salary_year_avg DESC
 LIMIT 10
 
+
+-- What's the yearly salary of the top 10 highest-paying Data Analyst jobs in London, UK in GBP?
+SELECT jpf.job_title, cd.name, ROUND(jpf.salary_year_avg * 0.8, 0) AS salary_year_avg_gbp
+FROM public.job_postings_fact AS jpf
+JOIN public.company_dim as cd
+    ON jpf.company_id = cd.company_id
+WHERE jpf.job_location = 'London, UK'
+AND jpf.job_title_short = 'Data Analyst'
+AND jpf.job_title LIKE '%Data Analyst%'
+AND jpf.salary_year_avg IS NOT NULL
+ORDER BY jpf.salary_year_avg DESC
+LIMIT 10;
