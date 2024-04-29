@@ -29,8 +29,9 @@ LIMIT 10;
 
 /*
 I have made a few changes to the original query from the course:
-- I have changed the job location filter to also include London, UK as a location as that is where I am based
-- I have added an extra check in the job title as I saw that some jobs listed in job_title_short are listed as Data Analyst jobs, but in the job_title column they can be listed as other roles such as Data Scientist.
+- Changed the job location filter to also include London, UK as a location as that is where I am based
+- Added an extra check in the job title as I saw that some jobs listed in job_title_short are listed as Data Analyst jobs, but in the job_title column they can be listed as other roles such as Data Scientist.
+- Added a column with the salary converted from USD to GBP at a rough conversion rate of 1 USD = 0.8 GBP. 
 */
 
 SELECT
@@ -39,6 +40,7 @@ SELECT
     job_location,
     job_schedule_type,
     salary_year_avg,
+    ROUND(jpf.salary_year_avg * 0.8, 0) AS salary_year_avg_gbp,
     job_posted_date::DATE,
     name AS company_name
 FROM

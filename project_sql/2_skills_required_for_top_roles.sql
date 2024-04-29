@@ -41,31 +41,27 @@ ORDER BY
 /*
 ChatGPT's response to a request to analyse:
 
-Sure, let's analyze the skills required for the top ten highest earning Data Analyst jobs based on the provided CSV data:
+Associate Director - Data Insights at AT&T:
+Skills: SQL, Python, R, Azure, Databricks, AWS, Pandas, PySpark, Jupyter, Excel, Tableau, Power BI, PowerPoint
+Data Analyst, Marketing at Pinterest Job Advertisements:
+Skills: SQL, Python, R, Hadoop, Tableau
+Data Analyst (Hybrid/Remote) at UCLA Health Careers:
+Skills: SQL, Crystal, Oracle, Tableau, Flow
+Principal Data Analyst (Remote) at SmartAsset:
+Skills: SQL, Python, Go, Snowflake, Pandas, NumPy, Excel, Tableau, GitLab
+Director, Data Analyst - Hybrid at Inclusively:
+Skills: SQL, Python, Azure, AWS, Oracle, Snowflake, Tableau, Power BI, SAP, Jenkins, Bitbucket, Atlassian, Jira, Confluence
+Principal Data Analyst, AV Performance Analysis at Motional:
+Skills: SQL, Python, R, Git, Bitbucket, Atlassian, Jira, Confluence
+Principal Data Analyst at SmartAsset:
+Skills: SQL, Python, Go, Snowflake, Pandas, NumPy, Excel, Tableau, GitLab
+ERM Data Analyst at Get It Recruit - Information Technology:
+Skills: SQL, Python, R
 
-1. **Associate Director - Data Insights** at AT&T:
-   - Skills: SQL, Python, R, Azure, Databricks, AWS, Pandas, PySpark, Jupyter, Excel, Tableau, Power BI, PowerPoint
-
-2. **Data Analyst, Marketing** at Pinterest Job Advertisements:
-   - Skills: SQL, Python, R, Hadoop, Tableau
-
-3. **Data Analyst (Hybrid/Remote)** at UCLA Health Careers:
-   - Skills: SQL, Crystal, Oracle, Tableau, Flow
-
-4. **Principal Data Analyst (Remote)** at SmartAsset:
-   - Skills: SQL, Python, Go, Snowflake, Pandas, NumPy, Excel, Tableau, GitLab
-
-5. **Director, Data Analyst - Hybrid** at Inclusively:
-   - Skills: SQL, Python, Azure, AWS, Oracle, Snowflake, Tableau, Power BI, SAP, Jenkins, Bitbucket, Atlassian, Jira, Confluence
-
-6. **Principal Data Analyst, AV Performance Analysis** at Motional:
-   - Skills: SQL, Python, R, Git, Bitbucket, Atlassian, Jira, Confluence
-
-7. **Principal Data Analyst** at SmartAsset:
-   - Skills: SQL, Python, Go, Snowflake, Pandas, NumPy, Excel, Tableau, GitLab
-
-8. **ERM Data Analyst** at Get It Recruit - Information Technology:
-   - Skills: SQL, Python, R
-
-From this analysis, we can observe that SQL and Python are consistently required skills across these high-paying Data Analyst roles. Additionally, proficiency in data visualization tools like Tableau is also in demand. Other frequently mentioned skills include Excel, Git/GitLab, AWS, Azure, and various data manipulation libraries like Pandas and NumPy. Some roles also require knowledge of specific databases or platforms like Snowflake, Oracle, or Databricks.
+Across these high-paying Data Analyst roles, SQL and Python skills are consistently emphasized.
+Other important skills include proficiency in data visualization tools like Tableau,
+familiarity with cloud platforms such as Azure and AWS, expertise in data manipulation libraries like Pandas and NumPy, 
+as well as knowledge of specific databases or platforms like Snowflake and Oracle. 
+Additionally, proficiency in version control tools like Git/GitLab and collaboration platforms like
+Jira and Confluence is also valued.
 */
