@@ -28,8 +28,9 @@ ORDER BY
 LIMIT 10;
 
 /*
-The only modification I need to make to tailor this query to my own needs is to also include jobs that are London based.
-As the highest paid London based job is only the 11th highest in this list, it didn't affect the final results table.
+I have made a few changes to the original query from the course:
+- I have changed the job location filter to also include London, UK as a location as that is where I am based
+- I have added an extra check in the job title as I saw that some jobs listed in job_title_short are listed as Data Analyst jobs, but in the job_title column they can be listed as other roles such as Data Scientist.
 */
 
 SELECT
@@ -41,16 +42,18 @@ SELECT
     job_posted_date::DATE,
     name AS company_name
 FROM
-    job_postings_fact
+    job_postings_fact AS jpf
 LEFT JOIN
-    company_dim ON job_postings_fact.company_id = company_dim.company_id
+    company_dim AS cd ON jpf.company_id = cd.company_id
 WHERE
-    job_title_short = 'Data Analyst'
+    jpf.job_title_short = 'Data Analyst'
     AND
-    job_location IN('Anywhere', 'London, UK')
+    jpf.job_title LIKE '%Data Analyst%'
     AND
-    salary_year_avg IS NOT NULL
+    jpf.job_location IN('Anywhere', 'London, UK')
+    AND
+    jpf.salary_year_avg IS NOT NULL
 ORDER BY
-    salary_year_avg DESC
+    jpf.salary_year_avg DESC
 LIMIT 10
 
