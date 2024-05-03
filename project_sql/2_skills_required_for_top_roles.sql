@@ -9,22 +9,25 @@ Question: What skills are required for the top paying data analyst jobs?
 
 WITH top_paying_jobs AS (
     SELECT
-        job_id,
-        job_title,
-        salary_year_avg,
-        name AS company_name
+        jpf.job_id,
+        jpf.job_title,
+        jpf.salary_year_avg,
+        ROUND(jpf.salary_year_avg * 0.8, 0) AS salary_year_avg_gbp,
+        cd.name AS company_name
     FROM
-        job_postings_fact
-    LEFT JOIN
-        company_dim ON job_postings_fact.company_id = company_dim.company_id
-    WHERE
-        job_title_short = 'Data Analyst'
-        AND
-        job_location IN('Anywhere', 'London, UK')
-        AND
-        salary_year_avg IS NOT NULL
-    ORDER BY
-        salary_year_avg DESC
+    job_postings_fact AS jpf
+LEFT JOIN
+    company_dim AS cd ON jpf.company_id = cd.company_id
+WHERE
+    jpf.job_title_short = 'Data Analyst'
+    AND
+    jpf.job_title LIKE '%Data Analyst%'
+    AND
+    jpf.job_location IN('Anywhere', 'London, UK')
+    AND
+    jpf.salary_year_avg IS NOT NULL
+ORDER BY
+    jpf.salary_year_avg DESC
     LIMIT 10
 )
 
@@ -38,7 +41,7 @@ INNER JOIN skills_job_dim
 INNER JOIN skills_dim 
     ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
-    salary_year_avg DESC
+    salary_year_avg DESC;
 
 
 /*
@@ -68,3 +71,7 @@ as well as knowledge of specific databases or platforms like Snowflake and Oracl
 Additionally, proficiency in version control tools like Git/GitLab and collaboration platforms like
 Jira and Confluence is also valued.
 */
+
+
+
+

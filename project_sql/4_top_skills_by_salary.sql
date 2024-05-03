@@ -9,6 +9,7 @@ Question: What are the top skills based on salary?
 SELECT
     sd.skills,
     ROUND(AVG(jpf.salary_year_avg), 0) AS average_salary
+    COUNT(jpf.job_id) AS demand_count
 FROM
     job_postings_fact AS jpf
 INNER JOIN skills_job_dim AS sjd
@@ -25,7 +26,7 @@ GROUP BY
     sd.skills
 ORDER BY
     average_salary DESC
-LIMIT 25
+LIMIT 25;
 
 /*
 The top 25 average paying skills are shown here. It tells us that the highest paying skills are mainly web 

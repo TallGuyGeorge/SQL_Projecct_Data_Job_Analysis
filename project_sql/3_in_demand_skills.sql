@@ -22,7 +22,7 @@ GROUP BY
     sd.skills
 ORDER BY
     demand_count DESC
-LIMIT 5
+LIMIT 5;
 
 /*
 This shows that the five most in demand skills across the whole Data Analyst job market are:
