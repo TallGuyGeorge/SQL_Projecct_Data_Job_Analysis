@@ -8,7 +8,7 @@ Question: What are the top skills based on salary?
 
 SELECT
     sd.skills,
-    ROUND(AVG(jpf.salary_year_avg), 0) AS average_salary
+    ROUND(AVG(jpf.salary_year_avg), 0) AS average_salary,
     COUNT(jpf.job_id) AS demand_count
 FROM
     job_postings_fact AS jpf

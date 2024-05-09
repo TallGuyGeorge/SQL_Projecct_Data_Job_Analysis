@@ -315,12 +315,19 @@ From this query, we have learned that:
 
 # What I learned 
 
-This project was incredibly helpful in my journey to be a data analyst. The main skills I gained using this were:
+This project was incredibly helpful in my journey to being a data analyst. The main skills I gained using this were:
 - SQL: While I am not new to SQL, I was able to put what I had into good practice as well adding to my existing knowledge base.
 - Git and GitHub: I learned how to upload my project files, how others can collaborate on my projects and how I can share my projects with anyone.
 - ChatGPT: I have made use of ChatGPT in this course, primarily for:
     - Analysis: Providing insights from complicated queries
     - Visualisation: Creating tables way quicker than I ever could
-
+- Project work: Completing a project from start to the very end, including the final touches such as adding it to a repositoy and sharing it via my LinkedIn.
 
 # Conclusions
+
+From the queries made here, I can make the following conclusions:
+- The Holy Trinity: All data analysts should ensure at a minimum that they're confident in SQL, Excel and Python. These three appear in a huge proportion of the job listings, especially among lower level postings.
+- Tableau or PowerBI: Both of these visualisation tools are in high demand. While Tableau appears in our final query where we find the most optimum skills to learn and PowerBI doesn't, learning either would massively help you get that first step into Data Analytics.
+- Learn the basics then specialise: Once you've established yourself as a Data Analyst, the best way to bump up your salary is by learning one of the skills in Query 5. All the skills listed here give a great bump in pay and have a good amount of demand, so would be a good starting point in choosing where to go next. 
+
+
